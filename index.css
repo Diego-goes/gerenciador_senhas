@@ -10,9 +10,9 @@ body {
     background-size    : cover;
     height             : 100vh;
     display            : flex;
+    flex-direction     : column;
     align-items        : center;
     justify-content    : center;
-    flex-wrap: wrap;
 }
 
 :root {
@@ -21,6 +21,7 @@ body {
     --main-color-gradiente    : linear-gradient(145deg, #ece5f9, #d8d0e7);
     --background-color-primary: #9a6fff;
     --main-border-radius      : 20px;
+    --main-width              : 50vw;
 }
 
 .relevo_saltado {
@@ -42,36 +43,36 @@ body {
 }
 
 .input_btn {
-    width           : 20%;
-    padding         : 10px 15px;
+    /* width           : 20%; */
+    padding         : 10px;
     border-radius   : 20px;
     background-color: var(--main-color-gradiente);
-    border          : none;
-    transition      : all 0.1s;
+    border          : transparent solid 0.5px;;
     min-width       : min-content;
+    transition      : all 0.2s;
 }
 
 .input_btn:hover {
-    transform: scaleY(1.05) translateY(-1px);
+    border: #9a6fff solid 0.5px;
 }
-/* .teste{
-} */
 .input_btn:active {
-    transform: scaleY(0.9) translateY(4px);
+    transform       : scaleY(0.9) translateY(4px);
     background-color: var(--background-color-primary);
-    color: var(--main-color)
+    color           : var(--main-color)
 }
-section{
+
+section {
     margin-inline: 1vw;
-    min-width: min-content;
+    width        : var(--main-width );
+    min-width    : min-content;
 }
+
 #painel {
     text-align     : center;
     padding        : 10px 20px;
     display        : flex;
     flex-direction : column;
     justify-content: center;
-    width          : 30vw;
 
 }
 
@@ -81,22 +82,61 @@ section{
     padding        : 10px 15px;
 }
 
+hr {
+    width: var(--main-width );
+}
+
 #display_senhas {
-    width  : 30vw;
     padding: 10px 20px;
 }
-#campo_1_display{
+
+#campo_1_display {
     display        : flex;
     justify-content: center;
-    padding: 5px 0px;
+    padding        : 5px 0px;
 }
-#campo_1_display label{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+
+#campo_1_display label {
+    display        : flex;
+    justify-content: space-around;
+    flex-wrap      : nowrap;
+    width          : 100%;
 }
-input[type="text"]{
+
+#campo_1_display input[type="text"]:focus {
+    outline: 0;
+}
+
+#campo_1_display input[type="text"] {
     background-color: transparent;
-    border: none;
-    width: 50%;
+    border          : none;
+    width           : 50%;
+}
+
+#campo_2_display {
+    overflow-y: scroll;
+    max-height: 40vh;
+    margin-top: 5%;
+}
+
+.div_infos {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-around;
+    padding        : 1px 5%;
+    margin         : 5%;
+    transition     : all 1s;
+}
+
+.div_infos p {
+    width        : 30%;
+    text-overflow: ellipsis;
+}
+
+.div_infos input[type="text"],
+.div_infos input[type="password"] {
+    border          : none;
+    background-color: transparent;
+    width           : 25%;
+    min-width       : min-content;
 }
