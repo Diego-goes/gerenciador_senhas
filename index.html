@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -7,114 +7,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Senhas</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
 </head>
 
 <body>
+
+    <div class="input_btn mudar_tema" onclick="mudar_tema()">
+        <lord-icon src="https://cdn.lordicon.com/lytdihcu.json" trigger="hover"
+        colors="primary:#121331,secondary:#545454" id="icon_tema"> </lord-icon>
+        <p id="status_tema">Claro</p>
+    </div>
     <section id="painel">
         <h1>Gerenciador de Senhas</h1>
         <div id="campo_1_painel">
             <p>Importe suas senhas:</p>
-            <input type="button" value="Importar" id="btn_importar" class="input_btn relevo_saltado">
+            <div style="display:flex;align-items: center;" class="input_btn" onselectstart='return false'>
+                <lord-icon src="https://cdn.lordicon.com/oxqdcllr.json" trigger="hover"
+                    colors="primary:#121331,secondary:#545454" id="btn_importar">
+                </lord-icon>
+                <p> | Importar</p>
+            </div>
+            <!-- <input type="button" value="Importar" id="btn_importar" class="input_btn relevo_saltado"> -->
         </div>
     </section>
     <hr>
-    <section id="exibicao_senhas" class="relevo_saltado">
-        <div>
+    <section id="display_senhas">
+        <div id="campo_1_display" class="relevo_vazado">
+            <label for="input_text_pesquisar">
+                <!-- <input type="button" value="🗃️" class="input_btn"> -->
+                <lord-icon src="https://cdn.lordicon.com/esixrdij.json" trigger="hover"
+                    colors="primary:#242424,secondary:#545454" class="input_btn">
+                </lord-icon>
+                <input type="text" id="input_text_pesquisar" placeholder="Pesquisar...">
+                <!-- <input type="button" value="🔎" class="input_btn"> -->
+                <lord-icon src="https://cdn.lordicon.com/pvbutfdk.json" trigger="hover"
+                    colors="primary:#242424,secondary:#545454" class="input_btn"></lord-icon>
+            </label>
+        </div>
+
+        <div id="titles_campo_2">
+            <p>Site</p>
+            <p>User</p>
+            <p>Password</p>
+        </div>
+        <div id="campo_2_display" class="relevo_vazado">
+
+            <div class="div_infos relevo_saltado">
+                <input type="text" value="nome_do_site">
+                <input type="text" value="endereco@site.com.br">
+                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+                <div class="btns_option">
+                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
+                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
+                    </lord-icon>
+                    <div class="other_options">
+                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
+                            colors="primary:#121331,secondary:#848484" class="input_btn">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
+                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
+                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
+                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
+                        </lord-icon>
+                    </div>
+                </div>
+            </div>
+
+
 
         </div>
     </section>
-    <section id="display_senhas" >
-        <div id="campo_1_display" class="relevo_vazado">
-            <label for="input_text_pesquisar">
-                <input type="button" value="🗃️" class="input_btn">
-                <input type="text" id="input_text_pesquisar" placeholder="Pesquisar...">
-                <input type="button" value="🔎" class="input_btn">
-            </label>
-        </div>
-        <div id="campo_2_display" class="relevo_vazado">
-            
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senha">
-                <input type="button" value="👁️" class="input_btn">
-                <input type="button" value="&#65049;" class="input_btn">
-                <!-- <input type="button" value="📋" class="input_btn">
-                <input type="button" value="🔐" class="input_btn"> -->
-            </div>
-        </div>
-    </section>
+    <footer>
+        <a href="https://www.github.com/diego-goes" target="_blank">
+            <lord-icon id="icon_footer" src="https://cdn.lordicon.com/mfayjhaa.json" trigger="hover"
+                colors="primary:#121331,secondary:#9a6fff">
+            </lord-icon> | Coded by Diego Góes
+        </a>
+    </footer>
     <script src="gerenciador_de_senhas.js"></script>
 </body>
 
