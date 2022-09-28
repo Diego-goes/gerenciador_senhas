@@ -3,7 +3,7 @@
     --main-font-color     : rgb(38, 38, 38);
     --main-color          : #ede5fc;
     --second-color        : #9a6fff;
-    --main-color-gradiente: linear-gradient(145deg, #ece5f9, #d8d0e7);
+    --main-color-gradiente: linear-gradient(145deg, #bdbbcd, #eff0f6, #bdbbcd);
     --main-border-radius  : 20px;
     --main-width          : 60vw;
     --box-shadow-saltado  : 5px 5px 5px #b8afc9,
@@ -14,26 +14,27 @@
     --text-background-color      : transparent;
     --main-box-shadow-scrollbar  : inset -1px -1px 5px #cbb9eb;
     --second-box-shadow-scrollbar: inset 0px 0px 5px #c8b1f0;
+    --main-transition            : all .5s;
 }
 
 .dark-mode:root {
     --main-font-family    : Montserrat, Arial, Helvetica, sans-serif;
     --main-font-color     : rgb(237, 223, 255);
-    --main-color          : #1a1424;
+    --main-color          : #27242c;
     --second-color        : #7733ff;
-    --main-color-gradiente: linear-gradient(145deg, #120e18, #150929);
+    --main-color-gradiente: linear-gradient(145deg, #000000, #232023, #000000);
     --main-border-radius  : 20px;
     --main-width          : 60vw;
     --box-shadow-saltado  : 5px 5px 5px #0f0a17,
-        -5px -5px 5px #1b0d31;
+        -5px -5px 5px #27242c;
     --box-shadow-vazado: inset 5px 5px 5px #0f0a17,
-        inset -5px -5px 5px #1b0d31;
+        inset -5px -5px 5px #27242c;
     --border-radius-scrollbar    : 10px;
     --text-background-color      : transparent;
     --main-box-shadow-scrollbar  : inset -1px -1px 5px #251540;
     --second-box-shadow-scrollbar: inset 0px 0px 5px #231638;
+    --main-transition            : all .5s;
 }
-
 * {
     font-family: var(--main-font-family);
     color      : var(--main-font-color);
@@ -73,7 +74,7 @@ body {
     background-color: var(--main-color-gradiente);
     border          : transparent solid 0.5px;
     min-width       : min-content;
-    transition      : all 0.2s;
+    transition      : var(--main-transition);
 }
 
 .input_btn:hover {
@@ -86,17 +87,19 @@ body {
     background-color: var(--second-color);
     color           : var(--main-color)
 }
-.mudar_tema{
-    display: flex;
+
+.mudar_tema {
+    display    : flex;
     align-items: center;
-    gap: 10%;
-    border: var(--second-color) solid 0.5px;
-    position: absolute;
-    right: 10vw;
-    top: 10vh;
-    width: min-content;
-    transition: all 0.5s;
+    gap        : 10%;
+    border     : var(--second-color) solid 0.5px;
+    position   : absolute;
+    right      : 10vw;
+    top        : 10vh;
+    width      : min-content;
+    transition : var(--main-transition);
 }
+
 section {
     margin-inline: 1vw;
     width        : var(--main-width);
@@ -249,7 +252,7 @@ hr {
 .other_options lord-icon {
     position           : absolute;
     background-color   : var(--main-color);
-    transition         : all .5s;
+    transition         : var(--main-transition);
     /* box-shadow      : 2px 2px 5px #b8afc983,
         -2px -2px 5px #ffffff77; */
 }
