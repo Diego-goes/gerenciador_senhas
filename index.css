@@ -97,8 +97,8 @@ body {
     gap        : 10%;
     border     : var(--second-color) solid 0.5px;
     position   : absolute;
-    right      : 10vw;
-    top        : 10vh;
+    right      : 5vw;
+    top        : 5vh;
     width      : min-content;
     transition : var(--main-transition);
 }
