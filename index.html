@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark-mode">
 
 <head>
     <meta charset="UTF-8">
@@ -12,36 +12,34 @@
 
 <body>
 
-    <div class="input_btn mudar_tema" onclick="mudar_tema()">
+    <div class="input_btn mudar_tema" onclick="mudar_tema()" title="Alterar o tema do site">
         <lord-icon src="https://cdn.lordicon.com/lytdihcu.json" trigger="hover"
-        colors="primary:#121331,secondary:#545454" id="icon_tema"> </lord-icon>
+            colors="primary:#121331,secondary:#545454" id="icon_tema"> </lord-icon>
         <p id="status_tema">Claro</p>
     </div>
     <section id="painel">
         <h1>Gerenciador de Senhas</h1>
         <div id="campo_1_painel">
             <p>Importe suas senhas:</p>
-            <div style="display:flex;align-items: center;" class="input_btn" onselectstart='return false'>
+            <label for="btn_importar" class="input_btn" title="Importe um arquivo .TXT">
+            <input type="file" id="btn_importar" onselectstart='return false'>
                 <lord-icon src="https://cdn.lordicon.com/oxqdcllr.json" trigger="hover"
-                    colors="primary:#121331,secondary:#545454" id="btn_importar">
+                    colors="primary:#121331,secondary:#545454">
                 </lord-icon>
-                <p> | Importar</p>
-            </div>
-            <!-- <input type="button" value="Importar" id="btn_importar" class="input_btn relevo_saltado"> -->
+                <p>Importar</p>
+            </label>
         </div>
     </section>
     <hr>
     <section id="display_senhas">
         <div id="campo_1_display" class="relevo_vazado">
             <label for="input_text_pesquisar">
-                <!-- <input type="button" value="🗃️" class="input_btn"> -->
                 <lord-icon src="https://cdn.lordicon.com/esixrdij.json" trigger="hover"
-                    colors="primary:#242424,secondary:#545454" class="input_btn">
+                    colors="primary:#242424,secondary:#545454" class="input_btn" title="Filtrar">
                 </lord-icon>
-                <input type="text" id="input_text_pesquisar" placeholder="Pesquisar...">
-                <!-- <input type="button" value="🔎" class="input_btn"> -->
+                <input type="text" id="input_text_pesquisar" placeholder="Pesquisar..." >
                 <lord-icon src="https://cdn.lordicon.com/pvbutfdk.json" trigger="hover"
-                    colors="primary:#242424,secondary:#545454" class="input_btn"></lord-icon>
+                    colors="primary:#242424,secondary:#545454" class="input_btn" title="Buscar"></lord-icon>
             </label>
         </div>
 
@@ -53,174 +51,8 @@
         <div id="campo_2_display" class="relevo_vazado">
 
             <div class="div_infos relevo_saltado">
-                <input type="text" value="nome_do_site">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <div class="btns_option">
-                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
-                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
-                    </lord-icon>
-                    <div class="other_options">
-                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
-                            colors="primary:#121331,secondary:#848484" class="input_btn">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                    </div>
-                </div>
+                <p style="width: max-content;margin-inline: auto;">Nenhuma senha importada.</p>
             </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="nome_do_site">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <div class="btns_option">
-                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
-                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
-                    </lord-icon>
-                    <div class="other_options">
-                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
-                            colors="primary:#121331,secondary:#848484" class="input_btn">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="nome_do_site">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <div class="btns_option">
-                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
-                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
-                    </lord-icon>
-                    <div class="other_options">
-                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
-                            colors="primary:#121331,secondary:#848484" class="input_btn">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="nome_do_site">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <div class="btns_option">
-                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
-                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
-                    </lord-icon>
-                    <div class="other_options">
-                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
-                            colors="primary:#121331,secondary:#848484" class="input_btn">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="nome_do_site">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <div class="btns_option">
-                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
-                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
-                    </lord-icon>
-                    <div class="other_options">
-                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
-                            colors="primary:#121331,secondary:#848484" class="input_btn">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="nome_do_site">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <div class="btns_option">
-                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
-                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
-                    </lord-icon>
-                    <div class="other_options">
-                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
-                            colors="primary:#121331,secondary:#848484" class="input_btn">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="div_infos relevo_saltado">
-                <input type="text" value="nome_do_site">
-                <input type="text" value="endereco@site.com.br">
-                <input type="password" value="senhaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <div class="btns_option">
-                    <lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover"
-                        colors="primary:#121331,secondary:#545454" class="input_btn btn_ver">
-                    </lord-icon>
-                    <div class="other_options">
-                        <lord-icon src="https://cdn.lordicon.com/kndpqkzn.json" trigger="hover"
-                            colors="primary:#121331,secondary:#848484" class="input_btn">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rfqpkxhi.json" trigger="morph"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                        <lord-icon src="https://cdn.lordicon.com/rssflkwk.json" trigger="hover"
-                            colors="primary:#121331,secondary:#545454" class="input_btn  ">
-                        </lord-icon>
-                    </div>
-                </div>
-            </div>
-
 
 
         </div>

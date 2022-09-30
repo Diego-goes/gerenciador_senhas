@@ -72,6 +72,8 @@ body {
 }
 
 .input_btn {
+    display         : flex;
+    align-items     : center;
     padding         : 10px;
     border-radius   : var(--main-border-radius);
     background-color: var(--main-color-gradiente);
@@ -116,6 +118,10 @@ section {
     flex-direction : column;
     justify-content: center;
 
+}
+
+#btn_importar {
+    display: none;
 }
 
 #campo_1_painel {
@@ -193,6 +199,7 @@ hr {
 }
 
 ::-webkit-scrollbar-thumb {
+    height          : 20%;
     background-color: var(--main-color);
     border-radius   : var(--border-radius-scrollbar);
     box-shadow      : var(--main-box-shadow-scrollbar);
@@ -216,10 +223,10 @@ hr {
     height         : 8vh;
 }
 
-.div_infos p {
+/* .div_infos p {
     width        : 30%;
     text-overflow: ellipsis;
-}
+} */
 
 .div_infos input[type="text"],
 .div_infos input[type="password"] {
@@ -230,50 +237,54 @@ hr {
     text-align      : center;
 }
 
+.div_infos a {
+    width          : 25%;
+    overflow       : hidden;
+    text-overflow  : ellipsis;
+    text-decoration: none;
+    text-align     : center;
+}
+
 .btns_option {
     display        : flex;
     justify-content: center;
+    gap            : 10%;
 }
 
-.btns_option lord-icon {
+.btns_option img {
     width  : var(--main-size-icon);
     height : var(--main-size-icon);
     padding: 0;
-    border : dashed 1px var(--second-color);
-}
-
-.btn_ver {
-    margin-right: 10%;
+    border : dashed 0.5px var(--second-color);
+    background: var(--main-color-gradiente);
 }
 
 .other_options {
-    width   : 40px;
-    position: relative;
+    width          : 40px;
+    position       : relative;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
 }
 
-.other_options lord-icon {
+.other_options img {
     position        : absolute;
-    background-color: var(--main-color);
     transition      : var(--main-transition);
 }
 
-.other_options lord-icon:nth-child(1) {
+.other_options img:nth-child(1) {
     z-index: 3;
 }
 
-.show_other_options lord-icon {
-    visibility: visible;
-}
-
-.show_other_options lord-icon:nth-child(2) {
+.show_other_options img:nth-child(2) {
     transform: translateX(5%) translateY(-120%);
 }
 
-.show_other_options lord-icon:nth-child(3) {
+.show_other_options img:nth-child(3) {
     transform: translateX(120%) translateY(0%);
 }
 
-.show_other_options lord-icon:nth-child(4) {
+.show_other_options img:nth-child(4) {
     transform: translateX(5%) translateY(120%);
 }
 
